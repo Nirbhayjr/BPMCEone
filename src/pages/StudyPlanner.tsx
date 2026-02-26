@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AIBadge, DemoBanner } from "@/components/ui/demo-badge";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -129,9 +129,6 @@ export default function StudyPlanner() {
       variants={staggerContainer}
       className="max-w-7xl mx-auto"
     >
-      {/* Demo Banner */}
-      <DemoBanner />
-
       {/* Header */}
       <motion.div variants={fadeInUp} className="flex items-center justify-between mb-8">
         <div>

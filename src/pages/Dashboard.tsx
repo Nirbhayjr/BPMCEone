@@ -24,7 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { AIBadge, DemoBanner } from "@/components/ui/demo-badge";
+
 import {
   LineChart,
   Line,
@@ -449,9 +449,6 @@ export default function Dashboard() {
       variants={staggerContainer}
       className="max-w-7xl mx-auto"
     >
-      {/* Demo Banner */}
-      <DemoBanner />
-
       {/* Back to Home Button */}
       <motion.div variants={fadeInUp} className="mb-4">
         <Link to="/">

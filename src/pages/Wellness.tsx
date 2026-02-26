@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Heart, Smile, Meh, Frown, Wind, Flame, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AIBadge, DemoBanner } from "@/components/ui/demo-badge";
+
 
 export default function Wellness() {
   const [selectedMood, setSelectedMood] = useState<string | null>(null);
@@ -17,8 +17,6 @@ export default function Wellness() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-4xl mx-auto">
-      <DemoBanner />
-
       <div className="flex items-center gap-3 mb-8">
         <div className="w-10 h-10 rounded-xl bg-wellness/20 flex items-center justify-center">
           <Heart className="w-6 h-6 text-wellness" />

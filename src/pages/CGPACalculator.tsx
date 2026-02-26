@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { DemoBanner } from "@/components/ui/demo-badge";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -99,8 +99,6 @@ export default function CGPACalculator() {
       variants={staggerContainer}
       className="max-w-6xl mx-auto"
     >
-      <DemoBanner />
-
       {/* Header */}
       <motion.div variants={fadeInUp} className="mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center gap-3">

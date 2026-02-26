@@ -12,7 +12,7 @@ import {
   Briefcase, MapPin, GraduationCap, X, Mic, MicOff,
   VideoOff, PhoneOff, Users
 } from "lucide-react";
-import { DemoBanner } from "@/components/ui/demo-badge";
+
 
 interface Alumni {
   id: string;
@@ -94,8 +94,6 @@ const Alumni = () => {
 
   return (
     <div className="space-y-6">
-      <DemoBanner />
-
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

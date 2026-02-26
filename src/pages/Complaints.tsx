@@ -23,7 +23,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { DemoBanner } from "@/components/ui/demo-badge";
+
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 import { Label } from "@/components/ui/label";
@@ -259,9 +259,6 @@ export default function Complaints() {
       variants={staggerContainer}
       className="max-w-7xl mx-auto"
     >
-      {/* Demo Banner */}
-      <DemoBanner />
-
       {/* Header */}
       <motion.div variants={fadeInUp} className="flex items-center justify-between mb-8">
         <div>

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, FileText, Download, Calendar, BookOpen, Filter, Upload, Plus, User } from "lucide-react";
-import { DemoBanner } from "@/components/ui/demo-badge";
+
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -221,8 +221,6 @@ const PYQs = () => {
 
   return (
     <div className="space-y-6">
-      <DemoBanner />
-
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

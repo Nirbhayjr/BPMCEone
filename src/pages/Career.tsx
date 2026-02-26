@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Compass, Target, BookOpen, Briefcase, TrendingUp, Star, ChevronRight } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { AIBadge, DemoBanner } from "@/components/ui/demo-badge";
+
 
 export default function Career() {
   const skills = [
@@ -20,8 +20,6 @@ export default function Career() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-6xl mx-auto">
-      <DemoBanner />
-      
       <div className="flex items-center gap-3 mb-8">
         <div className="w-10 h-10 rounded-xl bg-career/20 flex items-center justify-center">
           <Compass className="w-6 h-6 text-career" />

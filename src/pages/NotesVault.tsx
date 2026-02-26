@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { DemoBanner } from "@/components/ui/demo-badge";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -48,8 +48,6 @@ export default function NotesVault() {
       variants={staggerContainer}
       className="max-w-7xl mx-auto"
     >
-      <DemoBanner />
-
       {/* Header */}
       <motion.div variants={fadeInUp} className="flex items-center justify-between mb-8">
         <div>
