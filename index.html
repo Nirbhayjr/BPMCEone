@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" style="color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -16,16 +16,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="/og-image.png" />
     
-    <!-- Theme initialization - prevents flash -->
+    <!-- Force dark theme immediately - prevents flash -->
     <script>
       (function() {
-        const theme = localStorage.getItem('theme') || 'dark';
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-        localStorage.setItem('theme', theme);
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+        localStorage.setItem('theme', 'dark');
       })();
     </script>
   </head>

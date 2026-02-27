@@ -159,7 +159,7 @@ export default function Attendance() {
 
   const getHealthStatus = (percentage: number) => {
     if (percentage >= 85) return { color: "attendance", label: "Excellent", bgColor: "bg-attendance/20" };
-    if (percentage >= 75) return { color: "lost", label: "Good", bgColor: "bg-lost/20" };
+    if (percentage >= 75) return { color: "accent", label: "Good", bgColor: "bg-accent/20" };
     return { color: "safety", label: "Critical", bgColor: "bg-safety/20" };
   };
 

@@ -110,10 +110,10 @@ export default function Onboarding() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-2xl">
-        <div className="glass-card p-8 md:p-12 text-foreground">
+        <div className="glass-card border-accent/20 p-8 md:p-12 text-foreground shadow-glow-accent">
           <div className="flex items-center justify-between mb-6">
             <Link to="/">
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 hover:border-accent hover:text-accent">
                 <Home className="w-4 h-4" />
                 Back to Home
               </Button>
@@ -124,14 +124,14 @@ export default function Onboarding() {
           </div>
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient-bg mb-4 shadow-glow">
-              <GraduationCap className="w-8 h-8 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent mb-4 shadow-glow-accent">
+              <GraduationCap className="w-8 h-8 text-accent-foreground" />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
               {mode === "signup" ? (
-                <>Welcome to <span className="gradient-text">BPMCEOne</span></>
+                <>Welcome to <span className="text-accent">BPMCEOne</span></>
               ) : (
-                <>Sign in to <span className="gradient-text">BPMCEOne</span></>
+                <>Sign in to <span className="text-accent">BPMCEOne</span></>
               )}
             </h1>
             <p className="text-muted-foreground">
@@ -157,7 +157,7 @@ export default function Onboarding() {
                     placeholder="Enter your full name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -174,7 +174,7 @@ export default function Onboarding() {
                     placeholder="2023001"
                     value={formData.rollNumber}
                     onChange={(e) => setFormData({ ...formData, rollNumber: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -191,7 +191,7 @@ export default function Onboarding() {
                     placeholder="Create a password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -250,7 +250,7 @@ export default function Onboarding() {
                     placeholder="Enter your hometown"
                     value={formData.hometown}
                     onChange={(e) => setFormData({ ...formData, hometown: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -319,7 +319,7 @@ export default function Onboarding() {
                     placeholder="Enter your roll number"
                     value={formData.rollNumber}
                     onChange={(e) => setFormData({ ...formData, rollNumber: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -336,7 +336,7 @@ export default function Onboarding() {
                     placeholder="Enter your password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="bg-background/50 border-border/60"
+                    className="bg-background/50 border-border/60 focus:border-accent focus:ring-accent transition-all"
                     required
                   />
                 </div>
@@ -347,12 +347,10 @@ export default function Onboarding() {
             <Button
               type="submit"
               size="lg"
-              className="w-full gradient-bg !text-white shadow-glow hover:shadow-glow-lg transition-all"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow-accent hover:shadow-glow-lg transition-all font-semibold"
             >
-              <span className="text-white font-semibold">
-                {mode === "signup" ? "Get Started" : "Sign In"}
-              </span>
-              <ArrowRight className="w-5 h-5 ml-2 text-white" />
+              {mode === "signup" ? "Get Started" : "Sign In"}
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </form>
 

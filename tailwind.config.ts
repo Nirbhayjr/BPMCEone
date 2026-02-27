@@ -99,10 +99,11 @@ export default {
         "3xl": "calc(var(--radius) + 16px)",
       },
       boxShadow: {
-        'glow': '0 0 50px -12px hsl(221, 68%, 45%)',
-        'glow-lg': '0 0 70px -15px hsl(221, 68%, 45%)',
-        'glow-accent': '0 0 50px -12px hsl(45, 93%, 53%)',
-        'inner-glow': 'inset 0 0 20px -10px hsl(221, 68%, 45%)',
+        'glow': '0 0 50px -12px hsl(45, 93%, 56%)',
+        'glow-lg': '0 0 70px -15px hsl(45, 93%, 56%)',
+        'glow-accent': '0 0 50px -12px hsl(45, 93%, 56%)',
+        'glow-primary': '0 0 50px -12px hsl(221, 68%, 32%)',
+        'inner-glow': 'inset 0 0 20px -10px hsl(45, 93%, 56%)',
       },
       keyframes: {
         "accordion-down": {

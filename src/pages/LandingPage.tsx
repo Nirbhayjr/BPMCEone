@@ -192,7 +192,7 @@ export default function LandingPage() {
                 <Button variant="ghost" size="sm">Sign In</Button>
               </Link>
               <Link to="/onboarding">
-                <Button size="sm" className="gradient-bg text-primary-foreground shadow-glow hover:shadow-glow-lg transition-shadow">
+                <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow-accent hover:shadow-glow-lg transition-all font-semibold">
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -275,7 +275,7 @@ export default function LandingPage() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link to="/onboarding">
-                <Button size="lg" className="gradient-bg text-primary-foreground shadow-glow hover:shadow-glow-lg transition-all h-12 px-8 text-base">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow-accent hover:shadow-glow-lg transition-all h-12 px-8 text-base font-semibold">
                   Explore Dashboard
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -513,7 +513,7 @@ export default function LandingPage() {
 
               <motion.div variants={fadeInUp}>
                 <Link to="/onboarding">
-                  <Button size="lg" className="gradient-bg text-primary-foreground shadow-glow hover:shadow-glow-lg transition-all h-14 px-10 text-lg">
+                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow-accent hover:shadow-glow-lg transition-all h-14 px-10 text-lg font-semibold">
                     Get Started Free
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>

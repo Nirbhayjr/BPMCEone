@@ -53,9 +53,9 @@
     --lost: 45 93% 53%;
     --lost-foreground: 222 47% 11%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(221, 68%, 34%), hsl(221, 68%, 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(45, 93%, 53%), hsl(221, 68%, 34%));
+    /* Gradients - Royal Blue to Gold */
+    --gradient-primary: linear-gradient(135deg, hsl(221, 68%, 25%), hsl(221, 68%, 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(45, 93%, 56%), hsl(45, 65%, 52%));
     --gradient-warm: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(0, 84%, 60%));
     --gradient-glass: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.05));
 
@@ -76,48 +76,52 @@
   }
 
   .dark {
-    --background: 217 89% 9%;
+    /* Deep Navy Background - Premium Institutional Theme */
+    --background: 220 60% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 217 85% 11%;
+    --card: 220 55% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 217 85% 11%;
+    --popover: 220 55% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 221 68% 34%;
+    /* Royal Blue Primary */
+    --primary: 221 68% 32%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 65% 16%;
+    --secondary: 220 50% 12%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 65% 16%;
+    --muted: 220 50% 12%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 45 93% 53%;
+    /* Gold Accent */
+    --accent: 45 93% 56%;
     --accent-foreground: 222 47% 11%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 65% 20%;
-    --input: 217 65% 20%;
-    --ring: 221 68% 34%;
+    --border: 220 50% 18%;
+    --input: 220 50% 18%;
+    --ring: 45 93% 56%;
 
-    /* Shadows for dark mode */
+    /* Gold Glow Shadows for dark mode */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
-    --shadow-glow: 0 0 60px -12px hsl(221, 68%, 45%);
+    --shadow-glow: 0 0 60px -12px hsl(45, 93%, 56%);
 
-    --sidebar-background: 217 85% 10%;
+    /* Sidebar with deep navy and gold accent */
+    --sidebar-background: 220 58% 7%;
     --sidebar-foreground: 210 40% 90%;
-    --sidebar-primary: 221 68% 34%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 75% 13%;
+    --sidebar-primary: 221 68% 32%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 55% 10%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 70% 18%;
-    --sidebar-ring: 45 93% 53%;
+    --sidebar-border: 220 50% 15%;
+    --sidebar-ring: 45 93% 56%;
   }
 }
 
@@ -209,13 +213,13 @@
     @apply bg-lost text-lost-foreground;
   }
 
-  /* Glow effects */
+  /* Glow effects - Gold Accent */
   .glow-primary {
-    box-shadow: 0 0 50px -12px hsl(221, 68%, 45%);
+    box-shadow: 0 0 50px -12px hsl(221, 68%, 32%);
   }
 
   .glow-accent {
-    box-shadow: 0 0 50px -12px hsl(45, 93%, 53%);
+    box-shadow: 0 0 50px -12px hsl(45, 93%, 56%);
   }
   
   .shadow-glow {
@@ -223,11 +227,11 @@
   }
 
   .shadow-glow-lg {
-    box-shadow: 0 0 80px -15px hsl(221, 68%, 45%);
+    box-shadow: 0 0 80px -15px hsl(45, 93%, 56%);
   }
   
   .shadow-glow-accent {
-    box-shadow: 0 4px 20px -8px hsl(45, 93%, 53%);
+    box-shadow: 0 4px 20px -8px hsl(45, 93%, 56%);
   }
 
   /* Campus hero background */
