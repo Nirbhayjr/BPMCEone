@@ -203,19 +203,24 @@ export default function LandingPage() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        {/* Background image */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-screen">
+        {/* Responsive Background Image */}
         <div className="absolute inset-0 z-0">
+          {/* Desktop Background */}
           <img 
             src="/campus-bg.jpg" 
-            alt="" 
+            alt="Campus Background" 
             className="hidden md:block w-full h-full object-cover"
+            loading="eager"
           />
+          {/* Mobile Background - md breakpoint and below */}
           <img 
-            src="/campus-bg-mobile.jpg" 
-            alt="" 
-            className="md:hidden w-full h-full object-cover"
+            src="/campus-bg-mobile.jpeg" 
+            alt="Campus Background Mobile" 
+            className="block md:hidden w-full h-full object-cover"
+            loading="eager"
           />
+          {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background" />
         </div>
         
