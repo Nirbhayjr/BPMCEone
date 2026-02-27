@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Compass, Target, BookOpen, Briefcase, TrendingUp, Star, ChevronRight } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { AIBadge } from "@/components/ui/demo-badge";
 import { cn } from "@/lib/utils";
 
 

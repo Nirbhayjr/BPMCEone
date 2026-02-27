@@ -284,21 +284,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgments
-
-- **BPMCE Madhepura** - For the opportunity to build this platform
-- **shadcn/ui** - For the amazing component library
-- **Lovable** - For the initial project scaffold
-- All contributors and testers
-
----
-
-## 📞 Support
+## � Support
 
 For issues, questions, or suggestions:
 - 🐛 [Report a Bug](https://github.com/Nirbhayjr/BPMCEone/issues)
 - 💡 [Request a Feature](https://github.com/Nirbhayjr/BPMCEone/issues)
-- 📧 Email: [Contact Developer]
+- 📧 Email: nirbhay1005@gmail.com
 
 ---
 

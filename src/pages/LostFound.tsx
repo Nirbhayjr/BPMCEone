@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Search, MapPin, Clock, Tag, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { AIBadge } from "@/components/ui/demo-badge";
 import { cn } from "@/lib/utils";
 
 

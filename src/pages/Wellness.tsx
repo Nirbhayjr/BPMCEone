@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Heart, Smile, Meh, Frown, Wind, Flame, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AIBadge } from "@/components/ui/demo-badge";
 import { cn } from "@/lib/utils";
 
 
