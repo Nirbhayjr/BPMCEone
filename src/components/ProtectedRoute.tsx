@@ -6,7 +6,12 @@ interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isLoaded } = useAuth();
+
+  // Wait for auth state to be loaded from localStorage before redirecting
+  if (!isLoaded) {
+    return <div className="min-h-screen bg-background" />;
+  }
 
   if (!isAuthenticated) {
     return <Navigate to="/onboarding" replace />;

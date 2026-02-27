@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { 
   GraduationCap, 
@@ -137,14 +136,14 @@ const testimonials = [
 
 // Section wrapper with animations
 function AnimatedSection({ children, className, id }: { children: React.ReactNode; className?: string; id?: string }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05, initialInView: true });
 
   return (
     <motion.section
       id={id}
       ref={ref}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate={inView ? "visible" : "visible"}
       variants={staggerContainer}
       className={className}
     >

@@ -23,7 +23,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { AIBadge } from "@/components/ui/demo-badge";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/AuthContext";
 
 import {
   LineChart,
@@ -442,6 +444,21 @@ function RecentActivity() {
 }
 
 export default function Dashboard() {
+  const { user } = useAuth();
+
+  // Get time-based greeting
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good morning";
+    if (hour < 18) return "Good afternoon";
+    return "Good evening";
+  };
+
+  // Get first name from full name
+  const getFirstName = (fullName: string) => {
+    return fullName.split(" ")[0];
+  };
+
   return (
     <motion.div
       initial="hidden"
@@ -462,7 +479,7 @@ export default function Dashboard() {
       {/* Header */}
       <motion.div variants={fadeInUp} className="mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2">
-          Good afternoon, Nirbhay 👋
+          {getGreeting()}, {user?.name ? getFirstName(user.name) : "Student"} 👋
         </h1>
         <p className="text-muted-foreground">
           Here's what's happening with your campus life today.

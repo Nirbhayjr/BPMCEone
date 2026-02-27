@@ -13,6 +13,7 @@ export interface UserData {
 interface AuthContextType {
   user: UserData | null;
   isAuthenticated: boolean;
+  isLoaded: boolean;
   signUp: (userData: UserData) => void;
   signIn: (rollNumber: string, password: string) => boolean;
   logout: () => void;
@@ -23,6 +24,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<UserData | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Check localStorage for existing user data and session flag
@@ -34,6 +36,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (!userData?.password) {
           localStorage.removeItem('campusone_user');
           localStorage.removeItem('campusone_session');
+          setIsLoaded(true);
           return;
         }
         setUser(userData);
@@ -44,6 +47,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         localStorage.removeItem('campusone_session');
       }
     }
+    setIsLoaded(true);
   }, []);
 
   const signUp = (userData: UserData) => {
@@ -106,7 +110,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, signUp, signIn, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, isLoaded, signUp, signIn, logout }}>
       {children}
     </AuthContext.Provider>
   );
